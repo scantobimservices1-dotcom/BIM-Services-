@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIM Services | CAD Services India Replicated</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --orange: #ff9922;
+            --white: #ffffff;
+            --black: #000000;
+            --grey: #787878;
+            --darkgrey: #313131;
+            --lightblue: #3d4a6d;
+            --bggrey: #f6f7fb;
+            --darkblue: #263147;
+            --bluebg: #d8e6f5;
+            --ybg: #e2e9ec;
+            --servicebg: #e7f0fd;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--white);
+            color: var(--darkgrey);
+            scroll-behavior: smooth;
+        }
+
+        .bg-brand-orange { background-color: var(--orange); }
+        .text-brand-orange { color: var(--orange); }
+        .bg-brand-darkblue { background-color: var(--darkblue); }
+        .bg-brand-service { background-color: var(--servicebg); }
+        .bg-brand-blue-light { background-color: var(--bluebg); }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(38, 49, 71, 0.85), rgba(38, 49, 71, 0.85)), url('https://images.unsplash.com/photo-1503387762-592dea58ef23?auto=format&fit=crop&q=80&w=1920');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .section-padding { padding: 80px 0; }
+
+        .border-orange { border-color: var(--orange); }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--orange);
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="sticky-header shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-brand-darkblue rounded flex items-center justify-center">
+                    <span class="text-brand-orange font-bold text-xl">C</span>
+                </div>
+                <span class="text-2xl font-bold tracking-tight text-brand-darkblue">CAD<span class="text-brand-orange">SERVICES</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-semibold text-brand-darkblue">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link text-brand-orange border-b-2 border-orange">BIM Services</a>
+                <a href="#" class="nav-link">CAD Services</a>
+                <a href="#" class="nav-link">Architectural</a>
+                <a href="#" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient h-[500px] flex items-center text-white text-center">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Building Information Modeling (BIM)</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-8 text-blue-100">Intelligent 3D model-based processes that provide insights for architecture, engineering, and construction.</p>
+            <div class="flex justify-center">
+                <a href="#services" class="bg-brand-orange text-white px-8 py-3 rounded font-bold hover:bg-orange-600 transition shadow-lg">Our Expertise</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb & Intro -->
+    <section class="bg-brand-blue-light py-6" id="about">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center text-sm text-brand-darkblue mb-8">
+                <a href="#">Home</a> <span class="mx-2">/</span> <span class="font-bold">BIM Services</span>
+            </div>
+            <div class="max-w-4xl">
+                <h2 class="text-3xl font-bold text-brand-darkblue mb-4">BIM Outsourcing Services India</h2>
+                <div class="h-1 w-20 bg-brand-orange mb-6"></div>
+                <p class="text-lg leading-relaxed text-darkgrey">
+                    CAD Services India provides high-quality and cost-effective BIM Outsourcing Services to architects, engineers, real estate developers, and construction companies. We utilize the latest BIM software including Autodesk Revit and Navisworks to create intelligent 3D models that improve collaboration and reduce project risks.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="section-padding" id="services">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+                
+                <!-- Sidebar / Navigation -->
+                <div class="lg:col-span-1">
+                    <div class="bg-brand-service rounded-lg p-8 sticky top-24 shadow-sm">
+                        <h3 class="text-xl font-bold mb-6 text-brand-darkblue border-b border-gray-200 pb-4">Our BIM Portfolio</h3>
+                        <ul class="space-y-4">
+                            <li><a href="#" class="flex items-center text-brand-orange font-bold"><i class="fas fa-chevron-right mr-3"></i> Architectural BIM</a></li>
+                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> Structural BIM</a></li>
+                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> MEP BIM Services</a></li>
+                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> BIM Coordination & Clash Detection</a></li>
+                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> Scan to BIM</a></li>
+                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> Revit Family Creation</a></li>
+                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> 4D, 5D & 6D BIM</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Content Area -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-2xl font-bold text-brand-darkblue mb-6">Comprehensive BIM Solutions</h3>
+                    
+                    <!-- Service Detail 1 -->
+                    <div class="mb-12">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=800" alt="Architectural BIM" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md">
+                        <h4 class="text-xl font-bold text-brand-darkblue mb-3">Architectural BIM Services</h4>
+                        <p class="mb-4 text-grey leading-relaxed">We create detailed architectural 3D models from 2D sketches or CAD drawings. Our models include all elements like walls, floors, ceilings, doors, windows, and interior details according to LOD 100 to LOD 500 standards.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Schematic Design Modeling</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Construction Documentation</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Interior Modeling</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Quantity Take-offs</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service Detail 2 -->
+                    <div class="mb-12">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=800" alt="Structural BIM" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md">
+                        <h4 class="text-xl font-bold text-brand-darkblue mb-3">Structural BIM Services</h4>
+                        <p class="mb-4 text-grey leading-relaxed">Our structural BIM modeling services involve creating detailed 3D models of structural components including steel, concrete, and timber structures. We focus on accuracy to ensure seamless fabrication and construction.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Reinforcement Detailing</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Steel Structure Modeling</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Precast Concrete Modeling</li>
+                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Structural Analysis Support</li>
+                        </ul>
+                    </div>
+
+                    <!-- Features Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+                        <div class="bg-brand-blue-light p-6 rounded-lg border-l-4 border-orange card-hover">
+                            <h5 class="font-bold text-brand-darkblue mb-2">MEP BIM Services</h5>
+                            <p class="text-sm text-grey">Modeling of Mechanical, Electrical, and Plumbing systems for clash-free installations.</p>
+                        </div>
+                        <div class="bg-brand-blue-light p-6 rounded-lg border-l-4 border-orange card-hover">
+                            <h5 class="font-bold text-brand-darkblue mb-2">Clash Detection</h5>
+                            <p class="text-sm text-grey">Using Navisworks to identify and resolve interferences before construction begins.</p>
+                        </div>
+                        <div class="bg-brand-blue-light p-6 rounded-lg border-l-4 border-orange card-hover">
+                            <h5 class="font-bold text-brand-darkblue mb-2">Scan to BIM</h5>
+                            <p class="text-sm text-grey">Converting laser scan point cloud data into precise intelligent 3D BIM models.</p>
+                        </div>
+                        <div class="bg-brand-blue-light p-6 rounded-lg border-l-4 border-orange card-hover">
+                            <h5 class="font-bold text-brand-darkblue mb-2">Revit Family Creation</h5>
+                            <p class="text-sm text-grey">Developing custom parametric and non-parametric Revit families for manufacturers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-brand-darkblue text-white section-padding">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12">Why Choose CAD Services India for BIM?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <i class="fas fa-award text-4xl text-brand-orange mb-4"></i>
+                    <h4 class="font-bold mb-2">Expert Team</h4>
+                    <p class="text-sm text-blue-100">Certified BIM specialists with years of international experience.</p>
+                </div>
+                <div>
+                    <i class="fas fa-clock text-4xl text-brand-orange mb-4"></i>
+                    <h4 class="font-bold mb-2">Fast Turnaround</h4>
+                    <p class="text-sm text-blue-100">Timely delivery of models even for complex large-scale projects.</p>
+                </div>
+                <div>
+                    <i class="fas fa-bullseye text-4xl text-brand-orange mb-4"></i>
+                    <h4 class="font-bold mb-2">High Accuracy</h4>
+                    <p class="text-sm text-blue-100">Precision-driven modeling following global LOD standards.</p>
+                </div>
+                <div>
+                    <i class="fas fa-dollar-sign text-4xl text-brand-orange mb-4"></i>
+                    <h4 class="font-bold mb-2">Cost Effective</h4>
+                    <p class="text-sm text-blue-100">Up to 60% savings compared to in-house modeling costs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Updated Minimal Footer -->
+    <footer class="bg-[#1a2333] text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-start items-start gap-12">
+                
+                <!-- Social Media Icons (Shifted to Starting Position) -->
+                <div class="flex flex-col items-start min-w-[200px]">
+                    <h4 class="text-brand-orange font-bold uppercase tracking-wider text-xs mb-6">Connect With Us</h4>
+                    <div class="flex space-x-6">
+                        <a href="https://www.facebook.com/cadserviceindia/" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.linkedin.com/company/cad-services-bim-services" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/CADServicesInd" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.pinterest.com/cadservicesindia/" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Details (Left Aligned Flow) -->
+                <div class="flex flex-col space-y-6 text-sm text-gray-400 text-left flex-1 border-l border-gray-800 pl-0 md:pl-12">
+                    <div class="flex items-start">
+                        <i class="fas fa-map-marker-alt text-brand-orange mt-1 mr-4 w-5"></i>
+                        <span class="max-w-md leading-relaxed">1002, Salister, Rajpath Rangoli Road, Bodakdev, Ahmedabad-380054, Gujarat, India</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-phone text-brand-orange mt-1 mr-4 w-5"></i>
+                        <div class="leading-relaxed">
+                            <span class="block">USA: +1 510 680 3390 | UK: +44 333 011 9045</span>
+                            <span class="block">Australia: +61 48 999 7117 | India: +91 79 4800 4669</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-brand-orange mr-4 w-5"></i>
+                        <a href="mailto:services@cadservicesindia.com" class="hover:text-brand-orange transition">services@cadservicesindia.com</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-xs text-gray-500">
+                <p>&copy; 2024 CAD Services India. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
