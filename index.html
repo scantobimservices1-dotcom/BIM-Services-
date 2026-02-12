@@ -18,7 +18,6 @@
             --bggrey: #f6f7fb;
             --darkblue: #263147;
             --bluebg: #d8e6f5;
-            --ybg: #e2e9ec;
             --servicebg: #e7f0fd;
         }
 
@@ -51,8 +50,6 @@
 
         .section-padding { padding: 80px 0; }
 
-        .border-orange { border-color: var(--orange); }
-
         .nav-link {
             position: relative;
             transition: color 0.3s;
@@ -75,6 +72,22 @@
             z-index: 1000;
             backdrop-filter: blur(8px);
             background-color: rgba(255, 255, 255, 0.95);
+        }
+
+        /* Sidebar Scrollspy Styles */
+        .sidebar-link {
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+        }
+        .sidebar-link.active {
+            color: var(--orange);
+            font-weight: 700;
+            transform: translateX(5px);
+        }
+        .sidebar-link.active i {
+            color: var(--orange);
         }
     </style>
 </head>
@@ -135,65 +148,142 @@
                 <div class="lg:col-span-1">
                     <div class="bg-brand-service rounded-lg p-8 sticky top-24 shadow-sm">
                         <h3 class="text-xl font-bold mb-6 text-brand-darkblue border-b border-gray-200 pb-4">Our BIM Portfolio</h3>
-                        <ul class="space-y-4">
-                            <li><a href="#" class="flex items-center text-brand-orange font-bold"><i class="fas fa-chevron-right mr-3"></i> Architectural BIM</a></li>
-                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> Structural BIM</a></li>
-                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> MEP BIM Services</a></li>
-                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> BIM Coordination & Clash Detection</a></li>
-                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> Scan to BIM</a></li>
-                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> Revit Family Creation</a></li>
-                            <li><a href="#" class="flex items-center hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3"></i> 4D, 5D & 6D BIM</a></li>
+                        <ul class="space-y-2" id="sidebar-nav">
+                            <li><a href="#architectural-bim" class="sidebar-link hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3 text-xs text-gray-400"></i> Architectural BIM</a></li>
+                            <li><a href="#structural-bim" class="sidebar-link hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3 text-xs text-gray-400"></i> Structural BIM</a></li>
+                            <li><a href="#mep-bim" class="sidebar-link hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3 text-xs text-gray-400"></i> MEP BIM Services</a></li>
+                            <li><a href="#clash-detection" class="sidebar-link hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3 text-xs text-gray-400"></i> BIM Coordination & Clash Detection</a></li>
+                            <li><a href="#scan-to-bim" class="sidebar-link hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3 text-xs text-gray-400"></i> Scan to BIM</a></li>
+                            <li><a href="#revit-family" class="sidebar-link hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3 text-xs text-gray-400"></i> Revit Family Creation</a></li>
+                            <li><a href="#multid-bim" class="sidebar-link hover:text-brand-orange transition"><i class="fas fa-chevron-right mr-3 text-xs text-gray-400"></i> 4D, 5D & 6D BIM</a></li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Main Content Area -->
                 <div class="lg:col-span-2">
-                    <h3 class="text-2xl font-bold text-brand-darkblue mb-6">Comprehensive BIM Solutions</h3>
+                    <h3 class="text-2xl font-bold text-brand-darkblue mb-10">Comprehensive BIM Solutions</h3>
                     
-                    <!-- Service Detail 1 -->
-                    <div class="mb-12">
-                        <img src="asset/Bim Services.png" alt="Architectural BIM" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md">
-                        <h4 class="text-xl font-bold text-brand-darkblue mb-3">Architectural BIM Services</h4>
-                        <p class="mb-4 text-grey leading-relaxed">We create detailed architectural 3D models from 2D sketches or CAD drawings. Our models include all elements like walls, floors, ceilings, doors, windows, and interior details according to LOD 100 to LOD 500 standards.</p>
-                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
-                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Schematic Design Modeling</li>
-                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Construction Documentation</li>
-                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Interior Modeling</li>
-                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Quantity Take-offs</li>
+                    <!-- 1. Architectural BIM -->
+                    <div id="architectural-bim" class="mb-20 scroll-mt-28">
+                        <img src="http://googleusercontent.com/image_generation_content/0" alt="Architectural BIM" class="w-full h-72 object-cover rounded-xl mb-6 shadow-md">
+                        <h4 class="text-2xl font-bold text-brand-darkblue mb-4">Architectural BIM Services</h4>
+                        <p class="mb-6 text-grey leading-relaxed">We transform 2D conceptual sketches or CAD drawings into highly detailed 3D architectural models. Our expertise covers the entire project lifecycle, from schematic design to construction documentation, ensuring every architectural detail—from walls and partitions to complex ceiling systems—is precisely represented according to global LOD 100 to LOD 500 standards.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-center p-3 bg-slate-50 rounded-lg"><i class="fas fa-check text-brand-orange mr-3"></i> Detailed Floor Plans & Sections</div>
+                            <div class="flex items-center p-3 bg-slate-50 rounded-lg"><i class="fas fa-check text-brand-orange mr-3"></i> Exterior & Interior 3D Modeling</div>
+                            <div class="flex items-center p-3 bg-slate-50 rounded-lg"><i class="fas fa-check text-brand-orange mr-3"></i> Construction Documentation (CD) Sets</div>
+                            <div class="flex items-center p-3 bg-slate-50 rounded-lg"><i class="fas fa-check text-brand-orange mr-3"></i> Site Plan & Landscape Modeling</div>
+                        </div>
+                    </div>
+
+                    <!-- 2. Structural BIM -->
+                    <div id="structural-bim" class="mb-20 scroll-mt-28">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=1200" alt="Structural BIM" class="w-full h-72 object-cover rounded-xl mb-6 shadow-md">
+                        <h4 class="text-2xl font-bold text-brand-darkblue mb-4">Structural BIM Services</h4>
+                        <p class="mb-6 text-grey leading-relaxed">Our structural BIM modeling services involve creating intelligent 3D models of structural components, including steel, reinforced concrete, and timber. We prioritize accuracy to ensure that the structural design aligns perfectly with architectural intent, facilitating seamless fabrication and construction onsite.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-center p-3 bg-slate-50 rounded-lg"><i class="fas fa-check text-brand-orange mr-3"></i> Rebar Detailing & 3D Modeling</div>
+                            <div class="flex items-center p-3 bg-slate-50 rounded-lg"><i class="fas fa-check text-brand-orange mr-3"></i> Steel Connection Detailing</div>
+                            <div class="flex items-center p-3 bg-slate-50 rounded-lg"><i class="fas fa-check text-brand-orange mr-3"></i> Precast Concrete Modeling</div>
+                            <div class="flex items-center p-3 bg-slate-50 rounded-lg"><i class="fas fa-check text-brand-orange mr-3"></i> Structural Quantity Take-offs</div>
+                        </div>
+                    </div>
+
+                    <!-- 3. MEP BIM -->
+                    <div id="mep-bim" class="mb-20 scroll-mt-28">
+                        <div class="bg-brand-blue-light p-1 rounded-xl mb-6">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=1200" alt="MEP BIM" class="w-full h-72 object-cover rounded-xl shadow-sm">
+                        </div>
+                        <h4 class="text-2xl font-bold text-brand-darkblue mb-4">MEP BIM Services (Mechanical, Electrical, Plumbing)</h4>
+                        <p class="mb-6 text-grey leading-relaxed">We specialize in modeling complex Mechanical (HVAC), Electrical, Plumbing, and Fire Protection systems. Our MEP models are designed for constructability, ensuring that systems are routed efficiently and integrated without conflict into the building's architecture and structure.</p>
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                            <li class="flex items-center"><i class="fas fa-circle text-[8px] text-brand-orange mr-3"></i> HVAC Ducting & Piping Modeling</li>
+                            <li class="flex items-center"><i class="fas fa-circle text-[8px] text-brand-orange mr-3"></i> Electrical Conduit & Cable Tray Routing</li>
+                            <li class="flex items-center"><i class="fas fa-circle text-[8px] text-brand-orange mr-3"></i> Sanitary & Water Supply Systems</li>
+                            <li class="flex items-center"><i class="fas fa-circle text-[8px] text-brand-orange mr-3"></i> Fire Protection & Sprinkler Modeling</li>
                         </ul>
                     </div>
 
-                    <!-- Service Detail 2 -->
-                    <div class="mb-12">
-                        <img src="https://images.unsplash.com/photo-1541888946425-d81bb19480c5?auto=format&fit=crop&q=80&w=800" alt="Structural BIM" class="w-full h-64 object-cover rounded-xl mb-6 shadow-md">
-                        <h4 class="text-xl font-bold text-brand-darkblue mb-3">Structural BIM Services</h4>
-                        <p class="mb-4 text-grey leading-relaxed">Our structural BIM modeling services involve creating detailed 3D models of structural components including steel, concrete, and timber structures. We focus on accuracy to ensure seamless fabrication and construction.</p>
-                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
-                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Reinforcement Detailing</li>
-                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Steel Structure Modeling</li>
-                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Precast Concrete Modeling</li>
-                            <li class="flex items-center"><i class="fas fa-check text-brand-orange mr-2"></i> Structural Analysis Support</li>
-                        </ul>
+                    <!-- 4. Clash Detection -->
+                    <div id="clash-detection" class="mb-20 scroll-mt-28">
+                        <div class="bg-brand-darkblue text-white p-8 rounded-xl mb-6 flex items-center">
+                            <div class="flex-1">
+                                <h4 class="text-2xl font-bold mb-4 text-brand-orange">BIM Coordination & Clash Detection</h4>
+                                <p class="text-blue-100 opacity-90 leading-relaxed">Identify and resolve interferences before construction begins. Using Navisworks, we perform automated clash reports between Architectural, Structural, and MEP disciplines to eliminate costly field rework and scheduling delays.</p>
+                            </div>
+                            <i class="fas fa-search-nodes text-6xl text-brand-orange opacity-20 ml-6 hidden md:block"></i>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="p-6 border border-gray-100 rounded-lg shadow-sm">
+                                <h5 class="font-bold mb-2">Hard Clash Detection</h5>
+                                <p class="text-sm text-grey">Identifying physical intersections between different building components like pipes hitting beams.</p>
+                            </div>
+                            <div class="p-6 border border-gray-100 rounded-lg shadow-sm">
+                                <h5 class="font-bold mb-2">Soft Clash (Clearance)</h5>
+                                <p class="text-sm text-grey">Ensuring equipment has enough operational and maintenance space according to codes.</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Features Grid -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-                        <div class="bg-brand-blue-light p-6 rounded-lg border-l-4 border-orange card-hover">
-                            <h5 class="font-bold text-brand-darkblue mb-2">MEP BIM Services</h5>
-                            <p class="text-sm text-grey">Modeling of Mechanical, Electrical, and Plumbing systems for clash-free installations.</p>
+                    <!-- 5. Scan to BIM -->
+                    <div id="scan-to-bim" class="mb-20 scroll-mt-28">
+                        <img src="https://images.unsplash.com/photo-1544919328-98440026e632?auto=format&fit=crop&q=80&w=1200" alt="Scan to BIM" class="w-full h-72 object-cover rounded-xl mb-6 shadow-md">
+                        <h4 class="text-2xl font-bold text-brand-darkblue mb-4">Scan to BIM Services</h4>
+                        <p class="mb-6 text-grey leading-relaxed">We convert Point Cloud Data from laser scans into precise, as-built 3D BIM models. This is ideal for renovation, retrofit, or facility management projects where original blueprints may be missing or inaccurate.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="bg-brand-service px-4 py-2 rounded-full text-xs font-bold text-brand-darkblue border border-brand-orange">Point Cloud Processing</span>
+                            <span class="bg-brand-service px-4 py-2 rounded-full text-xs font-bold text-brand-darkblue border border-brand-orange">As-Built Documentation</span>
+                            <span class="bg-brand-service px-4 py-2 rounded-full text-xs font-bold text-brand-darkblue border border-brand-orange">Historical Renovation</span>
                         </div>
-                        <div class="bg-brand-blue-light p-6 rounded-lg border-l-4 border-orange card-hover">
-                            <h5 class="font-bold text-brand-darkblue mb-2">Clash Detection</h5>
-                            <p class="text-sm text-grey">Using Navisworks to identify and resolve interferences before construction begins.</p>
+                    </div>
+
+                    <!-- 6. Revit Family Creation -->
+                    <div id="revit-family" class="mb-20 scroll-mt-28">
+                        <h4 class="text-2xl font-bold text-brand-darkblue mb-4">Revit Family Creation</h4>
+                        <p class="mb-6 text-grey leading-relaxed">We develop custom, parametric Revit families for manufacturers, furniture companies, and MEP equipment suppliers. Our families are optimized for performance and include all necessary metadata for BIM workflows.</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="text-center p-6 bg-slate-50 rounded-xl card-hover">
+                                <i class="fas fa-couch text-brand-orange text-3xl mb-4"></i>
+                                <h5 class="font-bold text-sm">Furniture</h5>
+                            </div>
+                            <div class="text-center p-6 bg-slate-50 rounded-xl card-hover">
+                                <i class="fas fa-fan text-brand-orange text-3xl mb-4"></i>
+                                <h5 class="font-bold text-sm">MEP Fixtures</h5>
+                            </div>
+                            <div class="text-center p-6 bg-slate-50 rounded-xl card-hover">
+                                <i class="fas fa-door-open text-brand-orange text-3xl mb-4"></i>
+                                <h5 class="font-bold text-sm">Doors & Windows</h5>
+                            </div>
                         </div>
-                        <div class="bg-brand-blue-light p-6 rounded-lg border-l-4 border-orange card-hover">
-                            <h5 class="font-bold text-brand-darkblue mb-2">Scan to BIM</h5>
-                            <p class="text-sm text-grey">Converting laser scan point cloud data into precise intelligent 3D BIM models.</p>
-                        </div>
-                        <div class="bg-brand-blue-light p-6 rounded-lg border-l-4 border-orange card-hover">
-                            <h5 class="font-bold text-brand-darkblue mb-2">Revit Family Creation</h5>
-                            <p class="text-sm text-grey">Developing custom parametric and non-parametric Revit families for manufacturers.</p>
+                    </div>
+
+                    <!-- 7. 4D, 5D & 6D BIM -->
+                    <div id="multid-bim" class="mb-20 scroll-mt-28">
+                        <h4 class="text-2xl font-bold text-brand-darkblue mb-4">4D, 5D & 6D BIM Implementation</h4>
+                        <p class="mb-8 text-grey leading-relaxed">Beyond 3D, we add dimensions of time, cost, and sustainability to your models for total project transparency.</p>
+                        <div class="space-y-4">
+                            <div class="flex gap-4 p-4 border-l-4 border-brand-orange bg-slate-50">
+                                <div class="font-black text-2xl text-brand-orange">4D</div>
+                                <div>
+                                    <h5 class="font-bold">Construction Scheduling</h5>
+                                    <p class="text-sm text-grey">Linking the BIM model with the project schedule (Primavera/MS Project) for visual simulation.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 border-l-4 border-brand-orange bg-slate-50">
+                                <div class="font-black text-2xl text-brand-orange">5D</div>
+                                <div>
+                                    <h5 class="font-bold">Cost Estimation (Quantity Take-offs)</h5>
+                                    <p class="text-sm text-grey">Automated extraction of material quantities for real-time cost analysis and budgeting.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4 p-4 border-l-4 border-brand-orange bg-slate-50">
+                                <div class="font-black text-2xl text-brand-orange">6D</div>
+                                <div>
+                                    <h5 class="font-bold">Facility Management & Sustainability</h5>
+                                    <p class="text-sm text-grey">Including lifecycle data and energy analysis for efficient long-term building maintenance.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -234,19 +324,16 @@
     <footer class="bg-[#1a2333] text-white py-12">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-start items-start gap-12">
-                
-                <!-- Social Media Icons (Left Positioned) -->
                 <div class="flex flex-col items-start min-w-[200px]">
                     <h4 class="text-brand-orange font-bold uppercase tracking-wider text-xs mb-6">Connect With Us</h4>
                     <div class="flex space-x-6">
-                        <a href="https://www.facebook.com/cadserviceindia/" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/company/cad-services-bim-services" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://x.com/CADServicesInd" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.pinterest.com/cadservicesindia/" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" target="_blank" class="text-gray-400 hover:text-brand-orange transition text-2xl"><i class="fab fa-pinterest-p"></i></a>
                     </div>
                 </div>
 
-                <!-- Contact Details (Left Aligned) -->
                 <div class="flex flex-col space-y-6 text-sm text-gray-400 text-left flex-1 border-l border-gray-800 pl-0 md:pl-12">
                     <div class="flex items-start">
                         <i class="fas fa-map-marker-alt text-brand-orange mt-1 mr-4 w-5"></i>
@@ -255,13 +342,9 @@
                     <div class="flex items-start">
                         <i class="fas fa-phone text-brand-orange mt-1 mr-4 w-5"></i>
                         <div class="leading-relaxed">
-                            <span class="block">USA: +1 510 680 3390 | UK: +44 333 011 9045</span>
-                            <span class="block">Australia: +61 48 999 7117 | India: +91 79 4800 4669</span>
+                            <span class="block text-white font-bold mb-1">USA: +1 510 680 3390 | UK: +44 333 011 9045</span>
+                            <span class="block">India: +91 79 4800 4669</span>
                         </div>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope text-brand-orange mr-4 w-5"></i>
-                        <a href="mailto:services@cadservicesindia.com" class="hover:text-brand-orange transition">services@cadservicesindia.com</a>
                     </div>
                 </div>
             </div>
@@ -272,5 +355,34 @@
         </div>
     </footer>
 
+    <script>
+        // Scrollspy logic
+        window.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5 // Trigger when 50% of the section is visible
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute('id');
+                    const link = document.querySelector(`.sidebar-link[href="#${id}"]`);
+                    
+                    if (entry.isIntersecting) {
+                        // Remove active class from all
+                        document.querySelectorAll('.sidebar-link').forEach(l => l.classList.remove('active'));
+                        // Add to current
+                        if (link) link.classList.add('active');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all service sections
+            document.querySelectorAll('#services div[id]').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
